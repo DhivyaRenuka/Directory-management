@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps Integration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Google Maps Integration</h1>
+    <a href="home.html" class="back-button">Back to Main Page</a>
+    <!-- Map container -->
+    <div id="map-container">
+        
+        <iframe id="map" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Specify the map location and settings -->
+    <script>
+     var mapUrl = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d241412.9701526993!2d72.89403363732778!3d19.016299342875357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1477331526998";
+        document.getElementById("map").setAttribute("src", mapUrl);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration & Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bgloginfront">
+    <div class="container">
+        <h2>User Registration & Login</h2>
+        <button id="show-register">Register</button>
+        <button id="show-login">Login</button>
+        <form id="registration-form" class="hide" action="register.php" method="POST">
+            <label for="reg-username">Username:</label>
+            <input type="text" id="reg-username" name="reg-username" required>
+            <label for="reg-password">Password:</label>
+            <input type="password" id="reg-password" name="reg-password" required>
+            <button type="submit">Register</button>
+        </form>
+        <form id="login-form" class="hide" action="login.php" method="POST">
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" name="login-username" required>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="login-password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('show-register').addEventListener('click', function() {
+            document.getElementById('registration-form').classList.remove('hide');
+            document.getElementById('login-form').classList.add('hide');
+        });
+
+        document.getElementById('show-login').addEventListener('click', function() {
+            document.getElementById('login-form').classList.remove('hide');
+            document.getElementById('registration-form').classList.add('hide');
+        });
+    </script>
+</body>
+</html>
